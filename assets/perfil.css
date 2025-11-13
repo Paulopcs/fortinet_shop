@@ -1,0 +1,85 @@
+body {
+    background: #0b0b0b;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.perfil-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.perfil-card {
+    background: #1b1b1b;
+    border: 1px solid #333;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.avatar {
+    font-size: 70px;
+    background: #333;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    border-radius: 50%;
+    line-height: 120px;
+}
+
+.email {
+    color: #ccc;
+}
+
+.stats span {
+    display: block;
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+.links a {
+    margin: 0 10px;
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.subtitulo {
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item {
+    background: #1b1b1b;
+    border: 1px solid #333;
+    margin: 10px;
+    padding: 10px;
+    width: 160px;
+    border-radius: 10px;
+}
+
+.item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.preco {
+    color: #0f0;
+}
+
+.nao-tem {
+    color: #bbb;
+    margin-top: 20px;
+}

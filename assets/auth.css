@@ -1,0 +1,59 @@
+
+
+body {
+                                                                                                                                                        
+  background: radial-gradient(circle at top, #151515, #000);
+
+                                                                                                                                                      
+    color: white;
+    font-family: 'Segoe UI', Arial, sans-serif;
+
+    text-align: center;
+}
+
+.container {
+    background: #1b1b1b;
+    width: 350px;
+    margin: 100px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+}
+
+input {
+    width: 90%;
+    padding: 8px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    background: #222;
+    color: white;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background: #0056b3;
+}
+
+a {
+    color: #FFD700;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+.mensagem {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.sucesso { color: lime; }
+.erro { color: #ff5555; }

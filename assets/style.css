@@ -1,0 +1,127 @@
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #0b0b0b;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    color: #FFD700;
+    text-shadow: 0 0 5px #000;
+}
+
+a {
+    color: #FFD700;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* 🔹 Grade de Itens */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item {
+    background: #1b1b1b;
+    border: 1px solid #333;
+    margin: 10px;
+    padding: 10px;
+    width: 160px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 0 8px #000;
+    transition: transform 0.2s ease-in-out;
+}
+.item:hover {
+    transform: scale(1.05);
+}
+
+img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* 🏷️ Badges */
+.badges {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    text-align: left;
+}
+.badge {
+    display: inline-block;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin: 2px;
+    color: white;
+}
+.badge.novo { background: #007bff; }
+.badge.venda { background: #28a745; }
+.badge.possui { background: #FFD700; color: black; }
+
+/* 💰 Preço e Botões */
+.preco { color: #0f0; }
+.btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 6px;
+}
+.btn:hover {
+    background: #0056b3;
+}
+
+
+/* 🎯 Filtros de busca */
+.filtro {
+    margin: 20px auto;
+    background: #1b1b1b;
+    padding: 10px;
+    border-radius: 8px;
+    width: 80%;
+}
+.filtro input, .filtro select {
+    padding: 6px;
+    margin: 4px;
+    border: none;
+    border-radius: 4px;
+}
+.filtro label {
+    margin-left: 10px;
+}
+.filtro button {
+    background: #FFD700;
+    color: black;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.filtro button:hover {
+    background: #ffef80;
+}
+.btn-limpar {
+    background: #444;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+.btn-limpar:hover {
+    background: #666;
+}
+
+
+
