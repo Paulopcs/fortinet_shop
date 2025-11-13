@@ -1,9 +1,9 @@
-
+ 
 Sistema completo em PHP integrando com a API pública do Fortnite, com sincronização de dados, compra de itens, filtros avançados, histórico e gerenciamento de jogadores.
 
+ Sobre o Projeto
 
-
-Este projeto foi desenvolvido como parte de um desafio técnico, com o objetivo de consumir dados da API pública do **Fortnite** e criar um sistema funcional de loja virtual com:
+Este projeto foi desenvolvido como parte de um desafio técnico, com o objetivo de consumir dados da API pública do Fortnite e criar um sistema funcional de loja virtual com:
 
 - Exibição de cosméticos de forma paginada  
 - Indicação de itens novos e à venda  
@@ -16,19 +16,20 @@ Este projeto foi desenvolvido como parte de um desafio técnico, com o objetivo 
 
 
 
- Tecnologias Utilizadas
-PHP 8+
-PDO (MySQL)
-MySQL
-JavaScript
-HTML5 / CSS3
-API Fortnite (https://dash.fortnite-api.com/)
-Git e GitHub
-Arquitetura modular organizada por pastas
+##  Tecnologias Utilizadas
 
+- **PHP 8+**
+- **PDO (MySQL)**
+- **MySQL**
+- **JavaScript**
+- **HTML5 / CSS3**
+- **API Fortnite (https://dash.fortnite-api.com/)**
+- **Git e GitHub**
+- **Arquitetura modular organizada por pastas**
 
+---
 
- Como rodar o projeto localmente
+##  Como rodar o projeto localmente
 
 1. Instale o XAMPP ou outro servidor PHP 8+  
 2. Coloque os arquivos do projeto em:
@@ -36,25 +37,30 @@ Arquitetura modular organizada por pastas
 C:/xampp/htdocs/fortnite_shop/
 
 
+
 3. Acesse o phpMyAdmin e crie o banco:
 
 fortnite_shop
+
+
 
 4. Importe o arquivo incluído no repositório:
 
 database.sql
 
-5. No diretório `config/`, crie o arquivo conexao.php:
-🔧 Configurando o arquivo de conexão
 
-Dentro da pasta:
 
-/config/
-Crie manualmente um arquivo chamado:
+5. No diretório `config/`, crie um arquivo chamado:
+
 conexao.php
 
-Copie o código abaixo e preencha com suas credenciais locais:
 
+
+###  Arquivo de conexão (`conexao.php`)
+
+Dentro da pasta `/config/`, crie o arquivo `conexao.php` e cole o código abaixo:
+
+```php
 <?php
 $servidor = "localhost";
 $usuario  = "root";
@@ -68,19 +74,13 @@ try {
     die("Erro ao conectar: " . $e->getMessage());
 }
 
-
-
-⚠️ Importante:
+ Importante:
 O arquivo conexao.php não está no repositório.
 
-Acesse o sistema:
+
+✔️ Acesse o sistema:
+
 http://localhost/fortnite_shop/
-
-
-
-
-
-
 Decisões Técnicas Relevantes
 PHP Puro
 Optado propositalmente para manter simplicidade e foco no desafio proposto.
@@ -88,7 +88,7 @@ Optado propositalmente para manter simplicidade e foco no desafio proposto.
 PDO com prepared statements
 Toda comunicação com o banco usa prepared statements, garantindo segurança contra SQL Injection.
 
-Sincronização com a API externa
+Sincronização com API externa
 Os endpoints /cosmetics, /cosmetics/new e /shop são consumidos, processados e armazenados em banco para melhor performance.
 
 Paginação e filtros no servidor
@@ -101,13 +101,12 @@ Autenticação por sessão
 Sistema simples e funcional de login, com senha criptografada usando password_hash.
 
 Arquivo .gitignore configurado
-Arquivo conexao.php é ignorado por conter credenciais; conexao.example.php explica como configurar.
+conexao.php é ignorado por conter credenciais.
 
 Modal personalizada para confirmação de compras
 UX melhorada evitando compras acidentais.
 
-📂 Estrutura de Pastas
-
+Estrutura de Pastas
 
 fortnite_shop/
 │
@@ -143,5 +142,7 @@ fortnite_shop/
 │
 ├── database.sql            # Banco de dados completo
 └── README.md               # Este arquivo
+
+
 
 
