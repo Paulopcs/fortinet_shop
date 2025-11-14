@@ -1,59 +1,73 @@
-
-
+/* Fundo */
 body {
-                                                                                                                                                        
-  background: radial-gradient(circle at top, #151515, #000);
-
-                                                                                                                                                      
+    background: #0b0b0b;
+    font-family: Arial, sans-serif;
     color: white;
-    font-family: 'Segoe UI', Arial, sans-serif;
-
-    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
-.container {
+/* Container principal */
+.auth-container {
+    max-width: 380px;
     background: #1b1b1b;
-    width: 350px;
-    margin: 100px auto;
+    margin: 50px auto;
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 0 10px #000;
+    text-align: center;
 }
 
-input {
-    width: 90%;
-    padding: 8px;
-    margin: 8px 0;
+/* Títulos */
+.auth-container h2 {
+    color: #FFD700;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+.auth-container input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
     border: none;
-    border-radius: 5px;
-    background: #222;
-    color: white;
+    outline: none;
+    margin-bottom: 15px;
+    background: #333;
+    color: #fff;
+    font-size: 15px;
 }
 
-button {
+/* Botões */
+.auth-container button {
+    width: 100%;
+    padding: 12px;
     background: #007bff;
-    color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    font-size: 16px;
+    color: white;
+    border-radius: 6px;
     cursor: pointer;
 }
-button:hover {
+
+.auth-container button:hover {
     background: #0056b3;
 }
 
-a {
+/* Link */
+.auth-container a {
     color: #FFD700;
     text-decoration: none;
 }
-a:hover {
+
+.auth-container a:hover {
     text-decoration: underline;
 }
 
-.mensagem {
-    margin: 10px 0;
-    font-weight: bold;
+/* Responsividade */
+@media (max-width: 480px) {
+    .auth-container {
+        width: 90%;
+        margin-top: 30px;
+        padding: 20px;
+    }
 }
-
-.sucesso { color: lime; }
-.erro { color: #ff5555; }

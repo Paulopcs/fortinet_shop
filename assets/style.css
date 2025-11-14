@@ -123,5 +123,165 @@ img {
     background: #666;
 }
 
+/* GRID RESPONSIVO */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 10px;
+}
 
+/* ITEM */
+.item {
+    background: #1b1b1b;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    transition: transform .2s;
+}
+
+.item:hover {
+    transform: scale(1.03);
+}
+
+/* IMAGENS RESPONSIVAS */
+.item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* TEXTO */
+h1 {
+    font-size: 1.8rem;
+}
+
+/* HEADER RESPONSIVO */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.menu .left, .menu .right {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* BOTÕES */
+.menu a {
+    font-size: 0.9rem;
+}
+
+/* AJUSTES PARA TELAS MUITO PEQUENAS (CELULAR) */
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    .item {
+        padding: 8px;
+    }
+
+    .item h4 {
+        font-size: 0.95rem;
+    }
+
+    .preco {
+        font-size: 0.9rem;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .menu a {
+        font-size: 1rem;
+    }
+
+    .modal-content {
+        width: 90% !important;
+        padding: 20px !important;
+    }
+}
+/* HEADER RESPONSIVO */
+.menu {
+    background: #111;
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;       /* permite quebrar em linhas */
+    font-family: Arial, sans-serif;
+    color: white;
+    gap: 10px;
+}
+
+.menu .left,
+.menu .right {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.menu a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+/* Botões */
+.menu .right a {
+    color: #fff;
+    background: #007bff;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.menu .right a.logout {
+    background: #ff3333;
+}
+
+/* RESPONSIVO PARA CELULAR */
+@media (max-width: 600px) {
+
+    /* Centraliza tudo */
+    .menu {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .menu .left,
+    .menu .right {
+        justify-content: center;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    /* Links mais acessíveis */
+    .menu a {
+        font-size: 1rem;
+    }
+
+    /* Saudações no mobile */
+    .menu .right span {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 0.95rem;
+    }
+}
 

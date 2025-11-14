@@ -30,8 +30,8 @@ if (isset($_SESSION['usuario_id'])) {
 <head>
 <meta charset="UTF-8">
 <title>Detalhes - <?= htmlspecialchars($item['nome']) ?></title>
-<link rel="stylesheet" href="../assets/css/style.css">
-<link rel="stylesheet" href="../assets/css/modal.css">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/modal.css">
 <style>
 body {
     font-family: Arial, sans-serif;

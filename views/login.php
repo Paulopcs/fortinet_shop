@@ -1,8 +1,6 @@
 <?php
-session_start(); 
 require_once '../config/conexao.php';
-
-$erro = '';
+include 'header.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = trim($_POST['email']);
@@ -13,7 +11,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($user && password_verify($senha, $user['senha'])) {
-    
         $_SESSION['usuario_id'] = $user['id'];
         $_SESSION['nome'] = $user['nome'];
         $_SESSION['creditos'] = $user['creditos'];
@@ -25,33 +22,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-<meta charset="UTF-8">
-<title>Login - Fortnite Shop</title>
-<link rel="icon" href="https://fortnite-api.com/assets/img/logo_128.png" type="image/png">
+
 <link rel="stylesheet" href="../assets/auth.css">
-</head>
-<body>
 
-<div class="container">
-    <img src="https://fortnite-api.com/assets/img/logo_128.png" alt="Fortnite Logo" width="80">
-    <h2>🔐 Acessar Conta</h2>
+<div class="auth-container">
+    <h2>Entrar</h2>
 
-    <?php if ($erro): ?>
-        <p class="mensagem erro"><?= htmlspecialchars($erro) ?></p>
+    <?php if (!empty($erro)): ?>
+        <p style="color:red"><?= $erro ?></p>
     <?php endif; ?>
 
     <form method="POST">
-        <input type="email" name="email" placeholder="Email" required><br>
-        <input type="password" name="senha" placeholder="Senha" required><br>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="senha" placeholder="Senha" required>
         <button type="submit">Entrar</button>
     </form>
 
-    <p>Não tem conta? <a href="registrar.php">Cadastre-se aqui</a></p>
-    <p><a href="../views/index.php">⬅️ Voltar à loja</a></p>
+    <p>Não tem conta? <a href="../actions/registrar.php">Cadastrar-se</a></p>
 </div>
-
-</body>
-</html>

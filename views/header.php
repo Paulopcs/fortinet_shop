@@ -37,10 +37,11 @@ require_once __DIR__ . '/../config/conexao.php';
 <head>
 <meta charset="UTF-8">
 <title>Fortnite Shop</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="https://fortnite-api.com/assets/img/logo_128.png" type="image/png">
 <link rel="icon" href="https://fortnite-api.com/assets/img/logo_128.png" type="image/png">
-<link rel="stylesheet" href="../assets/css/style.css">
-<link rel="stylesheet" href="../assets/css/modal.css">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/modal.css">
 </head>
 <div class="menu">
     <div class="left">
