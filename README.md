@@ -67,6 +67,9 @@ $usuario  = "root";
 $senha    = "";
 $banco    = "fortnite_shop";
 
+$base_url = (isset($_SERVER['HTTPS']) ? "https://" : "http://")
+            . $_SERVER['HTTP_HOST'];
+$base_url .= "/fortnite_shop";
 try {
     $pdo = new PDO("mysql:host=$servidor;dbname=$banco;charset=utf8", $usuario, $senha);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
